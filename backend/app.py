@@ -81,7 +81,7 @@ def get_stocks():
             tickers = [row['ticker'] for row in results]
             return jsonify({'tickers': tickers}), 200
     except pymysql.Error as e:
-        return jsonify({'error': f'Database error: {str(e)}'}), 500
+        return jsonify({'error': f'Database errorr: {str(e)}'}), 500
     finally:
         connection.close()
 
