@@ -63,6 +63,8 @@ pipeline {
             steps {
                 echo '✅ Stopping existing containers...'
                 sh 'docker compose down || true'
+                sh 'docker stop stock_db stock_backend stock_frontend 2>/dev/null || true'
+                sh 'docker rm stock_db stock_backend stock_frontend 2>/dev/null || true'
 
                 echo '✅ Starting new containers...'
                 sh 'docker compose up -d'
