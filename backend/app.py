@@ -47,7 +47,7 @@ def predict():
             
             if len(results) < 3:
                 return jsonify({
-                    'error': f'Insufficient data for {ticker}. Need at least 3 days of historical data.'
+                    'error': f'Insufficientt data for {ticker}. Need at least 3 days of historical data.'
                 }), 404
             
             # Calculate moving average (simple rule-based prediction)
