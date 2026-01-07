@@ -66,7 +66,7 @@ def predict():
             }), 200
             
     except pymysql.Error as e:
-        return jsonify({'error': f'Database error: {str(e)}'}), 500
+        return jsonify({'error': f'Database errorrr: {str(e)}'}), 500
     finally:
         connection.close()
 
