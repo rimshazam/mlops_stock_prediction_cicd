@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(docker-compose:*)",
+      "Bash(powershell -Command:*)",
+      "Bash(curl:*)",
+      "Bash(jenkins --version:*)",
+      "Bash(docker start:*)",
+      "Bash(docker rm:*)",
+      "Bash(docker run:*)",
+      "Bash(timeout 30 docker logs:*)",
+      "Bash(docker logs:*)",
+      "Bash(Select-String -Pattern \"password\" -Context 0,5)",
+      "Bash(mkdir:*)",
+      "Bash(docker exec:*)"
+    ]
+  }
+}

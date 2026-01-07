@@ -19,6 +19,13 @@ DB_CONFIG = {
 def get_db_connection():
     return pymysql.connect(**DB_CONFIG)
 
+@app.route('/', methods=['GET'])
+def home():
+    return jsonify({
+        'message': 'Stock Prediction Backend is running!',
+        'available_endpoints': ['/health', '/stocks', '/predict']
+    }), 200
+
 @app.route('/health', methods=['GET'])
 def health():
     return jsonify({'status': 'healthy'}), 200
@@ -87,3 +94,5 @@ def get_stocks():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
+
+
